@@ -56,10 +56,10 @@
 </template>
 
 <script>
-  import Img1 from '../../assets/note/1.jpg'
-  import Img2 from '../../assets/note/2.jpg'
-  import Img3 from '../../assets/note/3.jpg'
-  import Img4 from '../../assets/note/4.jpg'
+  import Img1 from '../../assets/images/note/1.jpg'
+  import Img2 from '../../assets/images/note/2.jpg'
+  import Img3 from '../../assets/images/note/3.jpg'
+  import Img4 from '../../assets/images/note/4.jpg'
   import top from '@/components/Top'
 
   export default {
