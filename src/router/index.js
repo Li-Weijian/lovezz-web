@@ -4,6 +4,9 @@ import Index from '@/views/index/index'
 import Welcome from '@/views/Welcome'
 import Note from '@/views/note/Note'
 import Tic from '@/views/tic/Tic'
+import Gallery from '@/views/gallery/Gallery'
+import GalleryUpload from '@/views/gallery/GalleryUpload'
+import GalleryIndex from '@/views/gallery/Index'
 
 Vue.use(Router);
 
@@ -28,6 +31,22 @@ export default new Router({
       path: '/ticController/time',
       name: 'tic',
       component: Tic
+    },
+    {
+      path: '/galleryController',
+      component: GalleryIndex,
+      children: [
+        {
+          path: 'toGallery',
+          name: 'gallery',
+          component: Gallery
+        },
+        {
+          path: 'upload',
+          name: 'upload',
+          component: GalleryUpload
+        }
+      ]
     }
   ]
 })
