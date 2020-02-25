@@ -33,8 +33,9 @@
           </van-row>
 
           <!-- 图片 -->
-          <van-row>
-            <van-col offset="4" span="2" v-for="(img, key) in top.galleryList" :key="key"
+
+          <van-row class="test">
+            <van-col offset="4" span="3" v-for="(img, key) in top.galleryList" :key="key"
                      @click="previewImage(key, top.galleryList)">
               <van-image
                 width="5rem"
@@ -224,6 +225,10 @@
 </script>
 
 <style scoped>
+
+  .test {
+    margin-right: 20%;
+  }
 
   .icon {
     width: 40px;
