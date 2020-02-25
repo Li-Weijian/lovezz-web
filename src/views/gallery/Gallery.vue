@@ -35,14 +35,14 @@
 
     methods: {
       previewImage(key, imageList){
-        imageList[key] = imageList[key] + "?x-oss-process=image/auto-orient,1";
+        if (imageList[key].indexOf('?x-oss-process=image/auto-orient,1') == -1){
+          imageList[key] = imageList[key] + "?x-oss-process=image/auto-orient,1";
+        }
         ImagePreview({
           images: imageList,
           startPosition: key,
           lazyLoad: true
         });
-
-
       }
     },
 

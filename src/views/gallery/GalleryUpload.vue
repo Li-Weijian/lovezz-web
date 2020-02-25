@@ -40,10 +40,8 @@
       'value':{
         deep:true,
         handler: function(newV, oldV) {
-          console.log("newV:",newV);
-          console.log("fileList:",this.fileList.length);
 
-
+          //监听进度条value的变化判断是否上传完成
           if (newV == this.fileList.length){
             this.isLoading = false;
             setTimeout(()=>{

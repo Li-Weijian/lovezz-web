@@ -7,6 +7,9 @@ import Tic from '@/views/tic/Tic'
 import Gallery from '@/views/gallery/Gallery'
 import GalleryUpload from '@/views/gallery/GalleryUpload'
 import GalleryIndex from '@/views/gallery/Index'
+import TopsIndex from '@/views/tops/Index'
+import Tops from '@/views/tops/Tops'
+import TopsPublish from '@/views/tops/TopsPublish'
 
 Vue.use(Router);
 
@@ -45,6 +48,22 @@ export default new Router({
           path: 'upload',
           name: 'upload',
           component: GalleryUpload
+        }
+      ]
+    },
+    {
+      path: '/tops',
+      component: TopsIndex,
+      children: [
+        {
+          path: 'toTops',
+          name: 'tops',
+          component: Tops
+        },
+        {
+          path: 'publishTops',
+          name: 'publishTops',
+          component: TopsPublish
         }
       ]
     }

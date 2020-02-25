@@ -28,6 +28,4 @@ npm i vant -S
 npm i babel-plugin-import -D
 ```
 
-访问lovezz/xxx/xxx的接口都属于后台接口，只有带lovezz前缀才会代理后台服务器
-
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
