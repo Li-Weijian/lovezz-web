@@ -10,6 +10,7 @@ import GalleryIndex from '@/views/gallery/Index'
 import TopsIndex from '@/views/tops/Index'
 import Tops from '@/views/tops/Tops'
 import TopsPublish from '@/views/tops/TopsPublish'
+import Login from '@/views/user/Login'
 
 Vue.use(Router);
 
@@ -18,9 +19,8 @@ export default new Router({
     {
       path: '/index',
       name: 'index',
-      component: Index
-    },
-    {
+      component: Index,
+    },{
       path: '/',
       name: 'welcome',
       component: Welcome
@@ -28,7 +28,8 @@ export default new Router({
     {
       path:'/noteController/toNote',
       name: 'note',
-      component: Note
+      component: Note,
+      meta: { requiresAuth: true }
     },
     {
       path: '/ticController/time',
@@ -38,6 +39,7 @@ export default new Router({
     {
       path: '/galleryController',
       component: GalleryIndex,
+      meta: { requiresAuth: true },
       children: [
         {
           path: 'toGallery',
@@ -49,11 +51,12 @@ export default new Router({
           name: 'upload',
           component: GalleryUpload
         }
-      ]
+      ],
     },
     {
       path: '/tops',
       component: TopsIndex,
+      meta: { requiresAuth: true },
       children: [
         {
           path: 'toTops',
@@ -66,6 +69,11 @@ export default new Router({
           component: TopsPublish
         }
       ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
     }
   ]
 })
