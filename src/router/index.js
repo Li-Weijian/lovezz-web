@@ -20,10 +20,12 @@ export default new Router({
       path: '/index',
       name: 'index',
       component: Index,
+      meta: { requiresAuth: true }
     },{
       path: '/',
       name: 'welcome',
-      component: Welcome
+      component: Welcome,
+      meta: { requiresAuth: true }
     },
     {
       path:'/noteController/toNote',
