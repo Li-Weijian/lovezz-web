@@ -12,6 +12,7 @@ import Tops from '@/views/tops/Tops'
 import TopsPublish from '@/views/tops/TopsPublish'
 import Login from '@/views/user/Login'
 import Health from '@/views/health/Index'
+import Weight from '@/views/health/Weight'
 
 Vue.use(Router);
 
@@ -82,6 +83,12 @@ export default new Router({
       path: '/health',
       name: 'health',
       component: Health,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/weight',
+      name: 'weight',
+      component: Weight,
       meta: { requiresAuth: true },
     }
   ]

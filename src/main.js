@@ -6,18 +6,19 @@ import router from './router'
 import axios from 'axios'
 import Welcome from '@/views/Welcome'
 import store from './store'
-import echarts from 'echarts'
 
 
 import { Grid, GridItem, NavBar, Icon , Swipe, SwipeItem, Image, Field ,Button, CellGroup, Toast, ActionSheet, List,Cell,
-  Tag ,Dialog,Popup,Circle,Row, Col, Tabbar, TabbarItem,Lazyload, Uploader,Rate, Skeleton, Divider,} from 'vant';
+  Tag ,Dialog,Popup,Circle,Row, Col, Tabbar, TabbarItem,Lazyload, Uploader,Rate, Skeleton, Divider,Tab,Tabs, RadioGroup, Radio} from 'vant';
+
+
 
 Vue.use(Grid).use(GridItem).use(NavBar).use(Icon).use(Swipe).use(SwipeItem).use(Image)
   .use(Field).use(Button).use(CellGroup).use(Toast).use(ActionSheet).use(List).use(Cell)
   .use(Tag).use(Dialog).use(Popup).use(Circle).use(Row).use(Col).use(Tabbar).use(TabbarItem)
-  .use(Lazyload).use(Uploader).use(Rate).use(Skeleton).use(Divider);
+  .use(Lazyload).use(Uploader).use(Rate).use(Skeleton).use(Divider).use(Tab).use(Tabs).use(RadioGroup)
+  .use(Radio);
 
-Vue.use(echarts)
 
 Vue.prototype.$axios = axios;    //全局注册，使用方法为:this.$axios
 Vue.prototype.root = process.env.API_HOST;
